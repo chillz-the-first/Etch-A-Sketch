@@ -1,0 +1,60 @@
+:root {
+    --blocks-per-row: 4; /* Default number of blocks per row */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    border: 5px solid #20b2aa;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 800px;
+    height: 800px;
+}
+
+.block-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.block {
+    flex: 1 1 auto;
+    max-width: calc(100% / var(--blocks-per-row)/* - 10px*/);
+    aspect-ratio: 1 / 1;
+    background-color: #C0C0C0;
+    border: 1px solid #000000;
+}
+
+.btn-container {
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    background-color: #20b2aa;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.btn:hover {
+    background-color: #ffffff;
+    color: #20b2aa;
+    border: 3px solid #20b2aa;
+    padding: 9px 17px;
+}
